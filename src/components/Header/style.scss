@@ -1,0 +1,52 @@
+@import "../../colors";
+@import "../../common";
+
+.root {
+  position: fixed;
+  //width: 100%;
+  //background-color: rgba($palette-teal-400,1);
+  display: flex;
+  top: 2vh;
+  left: 1vw;
+  right: 1vw;
+  flex-direction: row;
+  //padding: 20px;
+  color: white;
+  z-index: 999;
+  height: 50px;
+}
+
+.menu {
+  list-style-type: none;
+  margin-left: 50px;
+  padding: 0;
+  overflow: hidden;
+  top: 0;
+  //width: 100%;
+
+  li {
+    float: left;
+
+    a {
+      display: block;
+      color: white;
+      font-size: 1rem;
+      text-align: center;
+      padding: 6px 16px 6px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: rgba(#c23531,0.8);
+        //background-color: $palette-deep-orange-200;
+        //color: $palette-deep-orange-200;
+      }
+    }
+  }
+}
+
+.active {
+  background-color: #c23531;
+  //a {
+  //  color: $palette-deep-orange-400;
+  //}
+}
