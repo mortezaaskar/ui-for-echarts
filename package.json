@@ -1,0 +1,57 @@
+{
+  "name": "ui-site",
+  "version": "1.0.0",
+  "description": "bigdata",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "compile": "node -r dotenv/config --harmony bin/compile",
+    "dev": "NODE_ENV=development node -r dotenv/config bin/server",
+    "prod": "npm run clean && NODE_ENV=production npm run compile",
+    "lint:test": "eslint test/eslint_boilerplate.js",
+    "lint": "eslint src",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
+    "test:watch": "npm run test -- --watch"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "liekkas.zeng",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-eslint": "^5.0.0-beta4",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-react-transform": "^2.0.0-beta1",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "debug": "^2.2.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.0",
+    "css-loader": "~0.21.0",
+    "eslint": "^1.10.3",
+    "eslint-plugin-babel": "^3.0.0",
+    "eslint-plugin-react": "^3.11.3",
+    "open-browser-webpack-plugin": "0.0.1",
+    "postcss-loader": "~0.7.0",
+    "pre-commit": "^1.1.2",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.0.1",
+    "redux-devtools": "^2.1.5",
+    "style-loader": "~0.13.0",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.6.0"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.0",
+    "lodash": "^3.10.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.0.0",
+    "react-router": "^1.0.0",
+    "redux": "^3.0.4"
+  }
+}
