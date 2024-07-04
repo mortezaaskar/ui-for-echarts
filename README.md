@@ -9,3 +9,6 @@ A Simple UI Show Site
 
 ### server
 * cd server && node app.js
+
+* deploy
+* 
